@@ -86,7 +86,7 @@ const CandidateDetails = () => {
                     }
                 })
         } catch (error) {
-            console.error("Error adding to favorites:", error);
+            // console.error("Error adding to favorites:", error);
             toast.error("Error adding to favorites", { autoClose: 2000 });
         }
     };
@@ -102,7 +102,7 @@ const CandidateDetails = () => {
                     }
                 })
         } catch (error) {
-            console.error("Error removing from favorites:", error);
+            // console.error("Error removing from favorites:", error);
             toast.error("Error removing from favorites", { autoClose: 2000 });
         }
     };

@@ -34,7 +34,7 @@ const ProfileCard = ({ profile }) => {
   });
 
   useEffect(() => {
-    console.log(favorites)
+    // console.log(favorites)
     if (favorites.length > 0) {
       const isFavoriteExist = favorites.find((favorite) => favorite.CandidateID === CandidateID);
       setIsFavorite(isFavoriteExist);
@@ -56,7 +56,7 @@ const ProfileCard = ({ profile }) => {
       toast.success("Candidate added to favorites", { autoClose: 2000 });
       refetch();
     } catch (error) {
-      console.error("Error adding to favorites:", error);
+      // console.error("Error adding to favorites:", error);
       toast.error("Error adding to favorites", { autoClose: 2000 });
     }
   };
@@ -67,7 +67,7 @@ const ProfileCard = ({ profile }) => {
       toast.success("Candidate removed from favorites", { autoClose: 2000 });
       refetch();
     } catch (error) {
-      console.error("Error removing from favorites:", error);
+      // console.error("Error removing from favorites:", error);
       toast.error("Error removing from favorites", { autoClose: 2000 });
     }
   };
