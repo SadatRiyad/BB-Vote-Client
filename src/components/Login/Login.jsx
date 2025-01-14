@@ -66,8 +66,15 @@ const Login = () => {
 
     // send OTP
     const sendOTP = async () => {
-        if (!email || email === '' || !email.match(/^[^\s@]+@students\.diu\.ac$/)) {
-            toast.error("Please enter a valid DIU student email address (example@students.diu.ac)");
+        // ** we only allow DIU student email addresses **
+
+        // if (!email || email === '' || !email.match(/^[^\s@]+@students\.diu\.ac$/)) {
+        //     toast.error("Please enter a valid DIU student email address (example@students.diu.ac)");
+        //     return;
+        // }
+        
+        if (!email || email === '') {
+            toast.error("Please enter a valid email address");
             return;
         }
         try {

@@ -275,6 +275,7 @@ export default function DashboardLayout() {
                             <DropdownMenuLabel>My Account</DropdownMenuLabel>
                             <DropdownMenuSeparator />
                             <DropdownMenuItem><Link to="/">Home</Link></DropdownMenuItem>
+                            <DropdownMenuItem><Link to="/aboutUs">About Us</Link></DropdownMenuItem>
                             <DropdownMenuItem><Link to="/contactUs/#support">Contact Us</Link></DropdownMenuItem>
                             <DropdownMenuSeparator />
                             <DropdownMenuItem onClick={handleLogout}>Logout</DropdownMenuItem>

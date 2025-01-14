@@ -50,7 +50,7 @@ const Dashboard = () => {
                             </CardContent>
                         </Card>
                         <Card className="hover:bg-customNil hover:text-white">
-                            <CardHeader className="font-bold">Approved Premium Vote</CardHeader>
+                            <CardHeader className="font-bold">Approved Premium Candidate</CardHeader>
                             <CardContent>
                                 <NavLink to="/dashboard/approvedPremium" className={`${forMblClass} md:${forLgClass}`}>
                                     <FaUserCheck className="h-4 w-4" /> Check Now

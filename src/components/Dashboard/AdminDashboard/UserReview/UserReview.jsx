@@ -42,11 +42,11 @@ const UserReview = () => {
             return res.data;
         }
     })
-    console.log(reviews)
+    // console.log(reviews)
     const handleViewStory = (id) => {
         // find userReviewText with id
         const story = reviews.find((story) => story._id === id);
-        console.log(id, reviews._id)
+        // console.log(id, reviews._id)
         if (!story) {
             Swal.fire({
                 title: "Error",

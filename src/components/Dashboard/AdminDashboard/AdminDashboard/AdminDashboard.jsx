@@ -44,10 +44,10 @@ const AdminDashboard = () => {
     };
 
     const pieData = {
-        labels: ['Total Vote', 'Male Vote', 'Female Vote', 'Premium Vote', 'Total Revenue', 'User Reviews Completed'],
+        labels: ['Total Candidate count', 'Male Candidate count', 'Female Candidate count', 'Premium Candidate count', 'Total Reviews Completed count', 'Total Revenue'],
         datasets: [
             {
-                data: [data.totalCandidates, data.maleCandidates, data.femaleCandidates, data.premiumCandidates, data.totalRevenue, data.userReviewsCompleted],
+                data: [data.totalCandidates, data.maleCandidates, data.femaleCandidates, data.premiumCandidates, data.userReviewsCompleted, data.totalRevenue],
                 backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#448811'],
             },
         ],

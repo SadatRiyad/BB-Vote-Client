@@ -84,6 +84,8 @@ const Navbar = () => {
                             <DropdownMenuLabel>My Account</DropdownMenuLabel>
                             <DropdownMenuSeparator />
                             <DropdownMenuItem><Link to="/dashboard">My Dashboard</Link></DropdownMenuItem>
+                            <DropdownMenuItem><Link to="/aboutUs">About Us</Link></DropdownMenuItem>
+                            <DropdownMenuItem><Link to="/contactUs">Contact Us</Link></DropdownMenuItem>
                             <DropdownMenuSeparator />
                             <DropdownMenuItem onClick={handleLogout}>Logout</DropdownMenuItem>
                         </DropdownMenuContent>
