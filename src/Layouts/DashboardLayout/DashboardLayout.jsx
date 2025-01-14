@@ -100,7 +100,7 @@ export default function DashboardLayout() {
                 <Users className="h-4 w-4" /> Manage Users
             </NavLink>
             <NavLink to="/dashboard/approvedPremium" className={`${forMblClass} md:${forLgClass}`}>
-                <FaUserCheck className="h-4 w-4" /> Approved Premium Vote
+                <FaUserCheck className="h-4 w-4" /> Approved Premium Candidate
             </NavLink>
             <NavLink to="/dashboard/approvedContactRequest" className={`${forMblClass} md:${forLgClass}`}>
                 <Contact2 className="h-4 w-4" /> Approved Contact Request
@@ -143,9 +143,9 @@ export default function DashboardLayout() {
                             <div className="p-4 fixed bottom-0">
                                 <Card x-chunk="dashboard-02-chunk-0">
                                     <CardHeader className="p-2 pt-0 md:p-4">
-                                        <CardTitle className="text-lg">Upgrade to Candidate!</CardTitle>
+                                        <CardTitle className="text-lg">Upgrade to Premium Candidate!</CardTitle>
                                         <CardDescription className="text-balance text-sm">
-                                            Become a candidate <br />and get unlimited access <br />to our support team.
+                                            Become a premium candidate <br />and get unlimited access <br />to our support team.
                                         </CardDescription>
                                     </CardHeader>
                                     <CardContent className="p-2 pt-0 md:p-4 md:pt-0">
@@ -210,9 +210,9 @@ export default function DashboardLayout() {
                                     <div className="mt-auto">
                                         <Card>
                                             <CardHeader>
-                                                <CardTitle className="border-0 border-b-0">Upgrade to Candidate!</CardTitle>
+                                                <CardTitle className="border-0 border-b-0">Upgrade to Premium Candidate!</CardTitle>
                                                 <CardDescription className="text-xs">
-                                                    Become a candidate and get unlimited access to our
+                                                    Become a premium candidate and get unlimited access to our
                                                     support team.
                                                 </CardDescription>
                                             </CardHeader>

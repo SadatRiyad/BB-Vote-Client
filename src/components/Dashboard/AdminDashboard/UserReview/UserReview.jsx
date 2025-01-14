@@ -42,17 +42,28 @@ const UserReview = () => {
             return res.data;
         }
     })
-
+    console.log(reviews)
     const handleViewStory = (id) => {
         // find userReviewText with id
         const story = reviews.find((story) => story._id === id);
-        // console.log(story)
+        console.log(id, reviews._id)
+        if (!story) {
+            Swal.fire({
+                title: "Error",
+                text: "Story not found",
+                icon: "error",
+                confirmButtonText: "Close",
+                background: "#eee",
+            });
+            return;
+        }
         Swal.fire({
-            imageUrl: story?.coupleImage,
-            title: `User Review for ${story?.selfCandidateID} and ${story?.partnerCandidateID}, MarriageDate: ${story?.marriageDate} and given Review: ${story?.reviewStar}/5 Star.`,
-            text: story.userReviewText,
+            imageUrl: story.reviewImage,
+            title: `${story.name} Rates ${story.rating}/5 Star, Email: ${story.email} and Review given date: ${story.reviewDate}`,
+            text: story.reviewText,
             confirmButtonText: "Close",
-            background: "#eee",
+            background: "#E33183",
+            color: "#fff",
         });
     }
     const handleDeleteStory = (id) => {
@@ -86,12 +97,12 @@ const UserReview = () => {
             {reviews.length > 0 ? (
                 <Card>
                     <Helmet>
-                        <title>User Review | BB-Vote</title>
+                        <title>User Reviews | BB-Vote</title>
                     </Helmet>
                     <CardHeader>
-                        <CardTitle>Total User Review: {reviews.length}</CardTitle>
+                        <CardTitle>Total Reviews: {reviews.length}</CardTitle>
                         <CardDescription>
-                            View and manage all User Reviews.
+                            View and manage all Reviews.
                         </CardDescription>
                     </CardHeader>
                     <CardContent className="overflow-x-auto">
@@ -99,8 +110,9 @@ const UserReview = () => {
                             <TableHeader>
                                 <TableRow>
                                     <TableHead>#</TableHead>
-                                    <TableHead>Male Candidate Id</TableHead>
-                                    <TableHead>Female Candidate Id</TableHead>
+                                    <TableHead>Name</TableHead>
+                                    <TableHead>Role</TableHead>
+                                    <TableHead>Rating</TableHead>
                                     <TableHead>Actions</TableHead>
                                 </TableRow>
                             </TableHeader>
@@ -108,9 +120,12 @@ const UserReview = () => {
                                 {reviews.map((request, index) => (
                                     <TableRow key={request._id}>
                                         <TableCell>{index + 1}</TableCell>
-                                        <TableCell>{request.selfCandidateID}</TableCell>
+                                        <TableCell>{request?.name}</TableCell>
                                         <TableCell>
-                                            {request.partnerCandidateID}
+                                            {request?.role}
+                                        </TableCell>
+                                        <TableCell>
+                                            {request?.rating} Star
                                         </TableCell>
                                         <TableCell>
                                             <DropdownMenu>

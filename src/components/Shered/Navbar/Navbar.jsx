@@ -19,8 +19,10 @@ const Navbar = () => {
         <>
             <NavLink to="/" className="hover:text-customGulabi text-white font-medium focus:text-customGulabi hover:bg-transparent transition-colors duration-75 mr-[1px] mb-[3px]">Home</NavLink>
             <NavLink to="/Candidates" className="hover:text-customGulabi text-white font-medium focus:text-customGulabi hover:bg-transparent transition-colors duration-75 mr-[1px] mb-[3px]">Candidates</NavLink>
-            <NavLink to="/aboutUs" className="hover:text-customGulabi text-white font-medium focus:text-customGulabi hover:bg-transparent transition-colors duration-75 mr-[1px] mb-[3px]">About Us</NavLink>
-            <NavLink to="/contactUs" className="hover:text-customGulabi text-white font-medium focus:text-customGulabi hover:bg-transparent transition-colors duration-75 mr-[1px] mb-[3px]">Contact Us</NavLink>
+            {!user && <NavLink to="/aboutUs" className="hover:text-customGulabi text-white font-medium focus:text-customGulabi hover:bg-transparent transition-colors duration-75 mr-[1px] mb-[3px]">About Us</NavLink>}
+            {!user && <NavLink to="/contactUs" className="hover:text-customGulabi text-white font-medium focus:text-customGulabi hover:bg-transparent transition-colors duration-75 mr-[1px] mb-[3px]">Contact Us</NavLink>}
+            {user && <NavLink to="/viewVoteResults" className="hover:text-customGulabi text-white font-medium focus:text-customGulabi hover:bg-transparent transition-colors duration-75 mr-[1px] mb-[3px]">View Vote Results</NavLink>}
+            {user && <NavLink to="/seeCurrentVote" className="hover:text-customGulabi text-white font-medium focus:text-customGulabi hover:bg-transparent transition-colors duration-75 mr-[1px] mb-[3px]">See Current Votes</NavLink>}
             {user && <NavLink to="/dashboard" className="hover:text-customGulabi text-white font-medium focus:text-customGulabi hover:bg-transparent transition-colors duration-75 mr-[1px] mb-[3px]">Dashboard</NavLink>}
         </>
     );

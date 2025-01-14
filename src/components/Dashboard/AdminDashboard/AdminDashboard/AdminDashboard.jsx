@@ -63,7 +63,7 @@ const AdminDashboard = () => {
             <div className='mb-4 items-center'>
                 <div className="flex items-center justify-between">
                     <h1 className="text-2xl md:text-[32px] font-bold mb-4">Admin Dashboard</h1>
-                    <Link to="/dashboard/userReview" className="text-sm rounded-lg bg-customGulabi text-white px-4 py-3 border-2 hover:border-customGulabi hover:bg-transparent hover:text-customGulabi font-bold mb-4">User Review</Link>
+                    <Link to="/dashboard/userReview" className="text-sm rounded-lg bg-customGulabi text-white px-4 py-3 border-2 hover:border-customNil hover:bg-transparent hover:text-customNil font-bold mb-4">User Review</Link>
                 </div>
             </div>
             <div>

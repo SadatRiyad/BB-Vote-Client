@@ -92,7 +92,7 @@ const ApprovedPremium = () => {
                 </Helmet>
                 <CardHeader>
                     <div className="justify-between flex mb-0 items-center">
-                        <CardTitle>Approved Premium Vote</CardTitle>
+                        <CardTitle>Approved Premium Candidate</CardTitle>
                         <p className="font-medium text-lg">Total Request: {premiumRequests?.length}</p>
                     </div>
                     <div className="pb-2">

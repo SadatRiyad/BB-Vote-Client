@@ -9,7 +9,7 @@ import DashboardLayout from '@/Layouts/DashboardLayout/DashboardLayout';
 import Candidates from '@/components/Candidates/Candidates';
 import AboutUs from '@/components/AboutUs/AboutUs';
 import ContactUs from '@/components/ContactUs/ContactUs';
-import ViewVote from '@/components/Dashboard/UserDashboard/ViewCandidate/ViewCandidate';
+import ViewCandidate from '@/components/Dashboard/UserDashboard/ViewCandidate/ViewCandidate';
 import CandidateForm from '@/components/Dashboard/UserDashboard/CandidateForm/CandidateForm';
 import MyContactRequests from '@/components/Dashboard/UserDashboard/MyContactRequests/MyContactRequests';
 import FavouritesVote from '@/components/Dashboard/UserDashboard/FavouritesCandidate/FavouritesCandidate';
@@ -24,6 +24,8 @@ import CheckoutPage from '@/components/CheckoutPage/CheckoutPage';
 import WrappedCheckoutUpgrade from '@/components/CheckoutPage/CheckoutUpgrade';
 import AdminRoute from './AdminRoute/AdminRoute';
 import UserReview from '@/components/Dashboard/AdminDashboard/UserReview/UserReview';
+import SeeCurrentVote from '@/components/Vote/SeeCurrentVote/SeeCurrentVote';
+import ViewVoteResults from '@/components/Vote/ViewVoteResults/ViewVoteResults';
 
 export const router = createBrowserRouter([
   {
@@ -37,7 +39,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/Candidates",
-        element: <Candidates></Candidates>,
+        element: <PrivateRoute><Candidates></Candidates></PrivateRoute>,
       },
       {
         path: "/Candidate/:id",
@@ -68,6 +70,16 @@ export const router = createBrowserRouter([
         path: "/checkout/upgrade/:id",
         element: <PrivateRoute><WrappedCheckoutUpgrade></WrappedCheckoutUpgrade></PrivateRoute>,
       },
+      // for View vote
+      {
+        path: "/viewVoteResults",
+        element: <PrivateRoute><ViewVoteResults></ViewVoteResults></PrivateRoute>,
+      },
+      // for all the see current vote running and give vote
+      {
+        path: "/seeCurrentVote",
+        element: <PrivateRoute><SeeCurrentVote></SeeCurrentVote></PrivateRoute>,
+      }
 
     ],
   },
@@ -83,7 +95,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "viewCandidate",
-        element: <PrivateRoute><ViewVote></ViewVote></PrivateRoute>,
+        element: <PrivateRoute><ViewCandidate></ViewCandidate></PrivateRoute>,
       },
       {
         path: "addCandidate",
