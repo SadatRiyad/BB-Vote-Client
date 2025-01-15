@@ -66,13 +66,12 @@ const Login = () => {
 
     // send OTP
     const sendOTP = async () => {
-        // ** we only allow DIU student email addresses **
+        // ** we only allow DIU student email addresses 
 
         // if (!email || email === '' || !email.match(/^[^\s@]+@students\.diu\.ac$/)) {
         //     toast.error("Please enter a valid DIU student email address (example@students.diu.ac)");
         //     return;
         // }
-        
         if (!email || email === '') {
             toast.error("Please enter a valid email address");
             return;
@@ -195,14 +194,14 @@ const Login = () => {
                                         message: "Please enter your email"
                                     },
                                     pattern: [
-                                        {
-                                            value: /^[a-zA-Z0-9._-]+@students\.diu\.ac$/,
-                                            message: "Only University email (example@students.diu.ac) addresses are allowed"
-                                        },
                                         // {
-                                        //     value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{1,9}$/,
-                                        //     message: "Invalid email format"
-                                        // }
+                                        //     value: /^[a-zA-Z0-9._-]+@students\.diu\.ac$/,
+                                        //     message: "Only University email (example@students.diu.ac) addresses are allowed"
+                                        // },
+                                        {
+                                            value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{1,9}$/,
+                                            message: "Invalid email format"
+                                        }
                                     ]
                                 })}
                                     id="email"

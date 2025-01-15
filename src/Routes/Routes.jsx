@@ -26,6 +26,7 @@ import AdminRoute from './AdminRoute/AdminRoute';
 import UserReview from '@/components/Dashboard/AdminDashboard/UserReview/UserReview';
 import SeeCurrentVote from '@/components/Vote/SeeCurrentVote/SeeCurrentVote';
 import ViewVoteResults from '@/components/Vote/ViewVoteResults/ViewVoteResults';
+import ManageCandidates from '@/components/Dashboard/AdminDashboard/ManageCandidates/ManageCandidates';
 
 export const router = createBrowserRouter([
   {
@@ -126,6 +127,10 @@ export const router = createBrowserRouter([
       {
         path: "manageUsers",
         element: <AdminRoute><PrivateRoute><ManageUsers></ManageUsers></PrivateRoute></AdminRoute>,
+      },
+      {
+        path: "manageCandidates",
+        element: <AdminRoute><PrivateRoute><ManageCandidates></ManageCandidates></PrivateRoute></AdminRoute>,
       },
       {
         path: "approvedPremium",

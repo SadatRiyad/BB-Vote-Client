@@ -132,6 +132,8 @@ const CandidateForm = () => {
 
     const onSubmit = async (data) => {
         try {
+            axiosSecure.patch(`/users/candidate/${user.email}`);
+            
             if (isEditMode) {
                 const response = await axiosSecure.put(`/Candidate/id/${id}`, data);
                 if (response.data.acknowledged === true) {

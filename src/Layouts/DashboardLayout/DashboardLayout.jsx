@@ -262,10 +262,10 @@ export default function DashboardLayout() {
                     </div>
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild>
-                            <Button variant="secondary" size="icon" className="rounded-full bg-customBlue">
-                                <CircleUser className="h-5 w-5 text-white" />
+                            <Button variant="secondary" size="icon" className="rounded-full bg-customBlue hover:bg-transparent border-t-2 border-b-2 border-l-2 border-r-2 border-customBlue text-white hover:text-customBlue transition-all duration-200">
+                                <CircleUser className="h-5 w-5" />
                                 <span className="sr-only">Toggle user menu</span>
-                                <Avatar className="w-15 rounded-full p-[2px]">
+                                <Avatar className="w-fit h-fit rounded-full ">
                                     <AvatarImage className="rounded-full" src={user?.photoURL} />
                                     <AvatarFallback></AvatarFallback>
                                 </Avatar>

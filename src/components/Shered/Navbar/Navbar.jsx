@@ -21,8 +21,8 @@ const Navbar = () => {
             <NavLink to="/Candidates" className="hover:text-customGulabi text-white font-medium focus:text-customGulabi hover:bg-transparent transition-colors duration-75 mr-[1px] mb-[3px]">Candidates</NavLink>
             {!user && <NavLink to="/aboutUs" className="hover:text-customGulabi text-white font-medium focus:text-customGulabi hover:bg-transparent transition-colors duration-75 mr-[1px] mb-[3px]">About Us</NavLink>}
             {!user && <NavLink to="/contactUs" className="hover:text-customGulabi text-white font-medium focus:text-customGulabi hover:bg-transparent transition-colors duration-75 mr-[1px] mb-[3px]">Contact Us</NavLink>}
-            {user && <NavLink to="/viewVoteResults" className="hover:text-customGulabi text-white font-medium focus:text-customGulabi hover:bg-transparent transition-colors duration-75 mr-[1px] mb-[3px]">View Vote Results</NavLink>}
             {user && <NavLink to="/seeCurrentVote" className="hover:text-customGulabi text-white font-medium focus:text-customGulabi hover:bg-transparent transition-colors duration-75 mr-[1px] mb-[3px]">See Current Votes</NavLink>}
+            {user && <NavLink to="/viewVoteResults" className="hover:text-customGulabi text-white font-medium focus:text-customGulabi hover:bg-transparent transition-colors duration-75 mr-[1px] mb-[3px]">View Vote Results</NavLink>}
             {user && <NavLink to="/dashboard" className="hover:text-customGulabi text-white font-medium focus:text-customGulabi hover:bg-transparent transition-colors duration-75 mr-[1px] mb-[3px]">Dashboard</NavLink>}
         </>
     );
@@ -37,7 +37,7 @@ const Navbar = () => {
                     >
                         <img src={logo} alt="Logo" className="w-[22%] rounded-sm bg-customGulabi" />
                     </Link>
-                    <div className="flex justify-evenly w-full">
+                    <div className="flex justify-evenly w-full gap-2">
                         {Links}
                     </div>
                 </nav>
@@ -71,10 +71,10 @@ const Navbar = () => {
                 {user ? (
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild>
-                            <Button variant="secondary" size="icon" className="rounded-full">
-                                <CircleUser className="h-5 w-5" />
+                        <Button variant="secondary" size="icon" className="rounded-full bg-customGulabi hover:bg-transparent border-2 border-customGulabi text-white hover:text-customGulabi transition-all duration-200">
+                        <CircleUser className="h-5 w-5" />
                                 <span className="sr-only">Toggle menu</span>
-                                <Avatar className="w-15 rounded-full p-[2px] border border-customGulabi">
+                                <Avatar className="w-fit h-fit rounded-full">
                                     <AvatarImage className="rounded-full" src={user?.photoURL} />
                                     <AvatarFallback></AvatarFallback>
                                 </Avatar>

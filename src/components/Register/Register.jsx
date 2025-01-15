@@ -140,6 +140,7 @@ const Register = () => {
                             email: data.email,
                             role: 'user',
                             isPremium: false,
+                            isCandidate: false,
                             // isVerified: false,
                         }
                         axiosPublic.post('/users', userInfo)
