@@ -96,8 +96,14 @@ export default function DashboardLayout() {
             <NavLink to="/dashboard/adminDashboard" className={`${forMblClass} md:${forLgClass}`}>
                 <LayoutDashboardIcon className="h-4 w-4" /> Admin Dashboard
             </NavLink>
+            <NavLink to="/dashboard/electionDashboard" className={`${forMblClass} md:${forLgClass}`}>
+                <LayoutDashboardIcon className="h-4 w-4" /> Election Dashboard
+            </NavLink>
             <NavLink to="/dashboard/manageUsers" className={`${forMblClass} md:${forLgClass}`}>
                 <Users className="h-4 w-4" /> Manage Users
+            </NavLink>
+            <NavLink to="/dashboard/manageCandidates" className={`${forMblClass} md:${forLgClass}`}>
+                <Users className="h-4 w-4" /> Manage Candidates
             </NavLink>
             <NavLink to="/dashboard/approvedPremium" className={`${forMblClass} md:${forLgClass}`}>
                 <FaUserCheck className="h-4 w-4" /> Approved Premium Candidate

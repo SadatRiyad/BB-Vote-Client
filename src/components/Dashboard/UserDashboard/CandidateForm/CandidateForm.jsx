@@ -99,41 +99,11 @@ const CandidateForm = () => {
         setSelectValues(prev => ({ ...prev, [name]: value }));
     };
 
-    // const onSubmit = (data) => {
-    //     if (isEditMode) {
-    //         axiosSecure.put(`/Candidate/id/${id}`, data)
-    //             .then((response) => {
-    //                 if (response.data.acknowledged === true) {
-    //                     toast("Candidate Updated successfully!", { type: "success", autoClose: 2000 });
-    //                     refetch();
-    //                 }
-    //             }).catch((error) => {
-    //                 console.log(error)
-    //                 toast("Failed to Update Candidate. Please try again.", { type: "error", autoClose: 2000 });
-    //             });
-    //     } else {
-    //         axios({
-    //             method: "post",
-    //             url: `${import.meta.env.VITE_API_URL}/Candidate`,
-    //             data: { ...data, email: user.email, CandidateID, isPremium },
-    //             withCredentials: true,
-    //         }).then((response) => {
-    //             if (response.data.acknowledged === true) {
-    //                 toast("Candidate saved successfully!", { type: "success", autoClose: 2000 });
-    //                 navigate(redirect);
-    //                 refetch();
-    //             }
-    //         }).catch((error) => {
-    //             console.log(error)
-    //             toast("Failed to save Candidate. Please try again.", { type: "error", autoClose: 2000 });
-    //         });
-    //     }
-    // };
 
     const onSubmit = async (data) => {
         try {
             axiosSecure.patch(`/users/candidate/${user.email}`);
-            
+
             if (isEditMode) {
                 const response = await axiosSecure.put(`/Candidate/id/${id}`, data);
                 if (response.data.acknowledged === true) {

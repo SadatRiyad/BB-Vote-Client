@@ -4,11 +4,12 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import './Home.css';
 import Hero from './Hero/Hero';
-import ProfilesSection from './PremiumBanner/ProfilesSection/ProfilesSection';
+// import ProfilesSection from './PremiumBanner/ProfilesSection/ProfilesSection';
 import HowItWorks from './HowItWorks/HowItWorks';
 import SuccessCounter from './SuccessCounter/SuccessCounter';
 import UserReviewList from './UserReviewList/UserReviewList';
 import useAuth from '../Hooks/useAuth/useAuth';
+import UpcomingElections from './UpcomingElections/UpcomingElections';
 
 const Home = () => {
     const { user } = useAuth();
@@ -19,7 +20,8 @@ const Home = () => {
                 <title>Home | BB-Vote</title>
             </Helmet>
             <Hero></Hero>
-            {user ? <ProfilesSection></ProfilesSection> : <></>}
+            {/* {user ? <ProfilesSection></ProfilesSection> : <></>} */}
+            {user ? <UpcomingElections></UpcomingElections> : <></>}
             <HowItWorks></HowItWorks>
             <SuccessCounter></SuccessCounter>
             <UserReviewList></UserReviewList>

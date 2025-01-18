@@ -27,6 +27,9 @@ import UserReview from '@/components/Dashboard/AdminDashboard/UserReview/UserRev
 import SeeCurrentVote from '@/components/Vote/SeeCurrentVote/SeeCurrentVote';
 import ViewVoteResults from '@/components/Vote/ViewVoteResults/ViewVoteResults';
 import ManageCandidates from '@/components/Dashboard/AdminDashboard/ManageCandidates/ManageCandidates';
+import ElectionDashboard from '@/components/Dashboard/AdminDashboard/ElectionDashboard/ElectionDashboard';
+import GiveVote from '@/components/Vote/GiveVote/GiveVote';
+import GetResult from '@/components/Vote/GetResult/GetResult';
 
 export const router = createBrowserRouter([
   {
@@ -76,10 +79,18 @@ export const router = createBrowserRouter([
         path: "/viewVoteResults",
         element: <PrivateRoute><ViewVoteResults></ViewVoteResults></PrivateRoute>,
       },
+      {
+        path: "/getResult/:id",
+        element: <PrivateRoute><GetResult></GetResult></PrivateRoute>,
+      },
       // for all the see current vote running and give vote
       {
         path: "/seeCurrentVote",
         element: <PrivateRoute><SeeCurrentVote></SeeCurrentVote></PrivateRoute>,
+      },
+      {
+        path: "/giveVote/:id",
+        element: <PrivateRoute><GiveVote></GiveVote></PrivateRoute>,
       }
 
     ],
@@ -123,6 +134,10 @@ export const router = createBrowserRouter([
       {
         path: "adminDashboard",
         element: <AdminRoute><PrivateRoute><AdminDashboard></AdminDashboard></PrivateRoute></AdminRoute>,
+      },
+      {
+        path: "electionDashboard",
+        element: <AdminRoute><PrivateRoute><ElectionDashboard></ElectionDashboard></PrivateRoute></AdminRoute>,
       },
       {
         path: "manageUsers",

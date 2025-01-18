@@ -16,7 +16,7 @@ const ProfilesSection = () => {
     const [profiles, setProfiles] = useState([]);
     const [sortOrder, setSortOrder] = useState('ascending');
     const [Candidates] = useCandidates();
-    const profileData = Candidates.filter(candidate => candidate?.isPremium === true).slice(0, 6);
+    const profileData = Candidates?.filter(candidate => candidate?.isPremium === true).slice(0, 6);
 
     useEffect(() => {
         const sortedProfiles = [...profileData].sort((a, b) => {
